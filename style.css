@@ -1,0 +1,303 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Estilo para el header */
+.header {
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    align-items: baseline;
+    justify-content: right;
+    padding: 2rem;
+    background-color: transparent;
+    background-image: url(img1_rec.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 20px;
+    color: #076d08;
+}
+
+.header .tagline {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #8c9a84;
+}
+
+/* Estilo para el menú en la sección hero */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ocultar los botones de menú en esta versión */
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+.latest-articles {
+    background-color: #003404;
+    padding: 140px 0;
+}
+
+.latest-articles h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.articles-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.articles-grid article {
+    width: 30%;
+    text-align: center;
+}
+
+.articles-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.articles-grid h3 {
+    margin: 20px 0 0;
+    font-size: 1.2rem;
+    color: #4c5b48;
+}
+
+.about {
+    background-color: whitesmoke;
+    padding: 200px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 40px;
+}
+
+.about-text {
+    width: 50%;
+    text-shadow: 0 0 40px #003404;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #4c5b48;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.subscribe {
+    background-color: whitesmoke;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.subscribe h2 {
+    font-size: 2rem;
+    color: #4c5b48;
+}
+
+.subscribe form {
+    margin-top: 20px;
+    padding-bottom: 64px;
+}
+
+.subscribe input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.subscribe button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4c5b48;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: whitesmoke;
+    padding: 48px 0;
+    text-align: center;
+}
+
+.icons {
+    color: #003404;
+    font-size: 48px;
+    list-style: none;
+    padding-top: 40px;
+    padding-bottom: 32px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-shadow: 0 0 16px #003404;
+}
+
+.footer-nav {
+    list-style: none;
+    padding-top: 32px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #4c5b48;
+    font-weight: bold;
+    text-shadow: 0 0 16px #003404;
+}
+
+.img1, .img2, .img3 {
+    box-shadow: 0 0 24px;
+    color: #003404;
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: black;
+    }
+
+    .cerrar-menu {
+        color: white;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: darkseagreen;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-list li a {
+        color: white;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        cursor: pointer;
+    }
+}
